@@ -1,0 +1,53 @@
+﻿@using Microsoft.AspNetCore.Authentication;
+@using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+ 
+<div>
+    <h4>Common stuff</h4>
+    <a class="btn btn-default" href="~/oidcsamples/challengescheme?schemeToChallenge=CodeFlowScheme">Sign in (regular code flow)</a>
+    <a class="btn btn-default" href="~/oidcsamples/signout?schemeToSignOut=CodeFlowScheme">Sign out (anything)</a>
+    <a class="btn btn-default" href="~/oidcsamples/callapi">Call API (with currently stored token)</a>
+</div>
+<div>
+    <h4>Improved client authentication</h4>
+    <a class="btn btn-default" href="~/oidcsamples/CallApiWithPrivateKeyJwtAuthenticationClientCredentialsFlow">Private key JWT (client credentials flow)</a>
+    <a class="btn btn-default" href="~/oidcsamples/challengescheme?schemeToChallenge=CodeFlowWithPrivateKeyJWTScheme">Private key JWT (code flow)</a>    
+<div>
+    <h4>JWT secured authorization request (JAR)</h4>
+    <a class="btn btn-default" href="~/oidcsamples/challengescheme?schemeToChallenge=CodeFlowWithJARScheme">JWT secured authorization request (JAR) (code flow)</a>
+    <a class="btn btn-default" href="~/oidcsamples/challengescheme?schemeToChallenge=CodeFlowWithPrivateKeyJWTandJARScheme">Private key JWT + JWT secured authorization request (JAR) (code flow)</a>
+</div>
+<div>
+    <h4>Token encryption</h4>
+    <a class="btn btn-default" href="~/oidcsamples/challengescheme?schemeToChallenge=CodeFlowWithTokenEncryptionScheme">Token encryption</a>
+</div>
+<div>
+    <h4>Proof of posession access token</h4>
+    <a class="btn btn-default" href="~/oidcsamples/CallApiWithDPoPClientCredentialsFlow">Proof of possession access token (DPoP - client credentials)</a>
+    <a class="btn btn-default" href="~/oidcsamples/CallApiWithDPoPCodeFlow">Proof of possession access token (DPoP - code flow)</a>
+</div>
+
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    var idToken = await Context.GetTokenAsync(OpenIdConnectParameterNames.IdToken);
+    var accessToken = await Context.GetTokenAsync(OpenIdConnectParameterNames.AccessToken);    
+    <h3 class="mt-2">Identity token</h3>
+    <p>@idToken</p>
+    <h3>Access token</h3>
+    <p>@accessToken</p>
+
+
+<h3>Claims</h3>
+<dl>
+    @foreach (var claim in User.Claims)
+    {
+        <dt>
+            @claim.Type
+        </dt>
+        <dd>
+            @claim.Value
+        </dd>
+    }
+</dl>
+}

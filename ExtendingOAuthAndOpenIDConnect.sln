@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtendingOAuthAndOpenIDConnect.WebClient", "ExtendingOAuthAndOpenIDConnect.WebClient\ExtendingOAuthAndOpenIDConnect.WebClient.csproj", "{0293DBF6-0BEE-4D7A-AB3C-3A181CC487BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtendingOAuthAndOpenIDConnect.API", "ExtendingOAuthAndOpenIDConnect.API\ExtendingOAuthAndOpenIDConnect.API.csproj", "{55499DF8-AB5C-4484-A170-269DE9A33FBE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marvin.IDP", "Marvin.IDP\Marvin.IDP.csproj", "{F8CAC464-39A4-4A57-9B15-D938174899C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Client", "01 - Client", "{3EE38647-D299-4031-89BF-D5243A848E6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - API", "02 - API", "{4D133821-6047-4021-8F7E-E0B07A6F9BFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - IDP", "03 - IDP", "{D44B708F-5A5C-458F-86B5-CE2437D7C3A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0293DBF6-0BEE-4D7A-AB3C-3A181CC487BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0293DBF6-0BEE-4D7A-AB3C-3A181CC487BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0293DBF6-0BEE-4D7A-AB3C-3A181CC487BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0293DBF6-0BEE-4D7A-AB3C-3A181CC487BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55499DF8-AB5C-4484-A170-269DE9A33FBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55499DF8-AB5C-4484-A170-269DE9A33FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55499DF8-AB5C-4484-A170-269DE9A33FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55499DF8-AB5C-4484-A170-269DE9A33FBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8CAC464-39A4-4A57-9B15-D938174899C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8CAC464-39A4-4A57-9B15-D938174899C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8CAC464-39A4-4A57-9B15-D938174899C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8CAC464-39A4-4A57-9B15-D938174899C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0293DBF6-0BEE-4D7A-AB3C-3A181CC487BB} = {3EE38647-D299-4031-89BF-D5243A848E6E}
+		{55499DF8-AB5C-4484-A170-269DE9A33FBE} = {4D133821-6047-4021-8F7E-E0B07A6F9BFC}
+		{F8CAC464-39A4-4A57-9B15-D938174899C7} = {D44B708F-5A5C-458F-86B5-CE2437D7C3A3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D49540E9-84CE-4BE9-ABBB-C51B87EACAB2}
+	EndGlobalSection
+EndGlobal
